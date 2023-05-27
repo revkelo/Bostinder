@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test/src"/>
+	<classpathentry kind="lib" path="libs/itextpdf-5.5.9.jar"/>
+	<classpathentry kind="lib" path="libs/javax-inject.jar"/>
+	<classpathentry kind="lib" path="libs/javax.activation-1.1.0.v201105071233.jar"/>
+	<classpathentry kind="lib" path="libs/javax.ejb.jar"/>
+	<classpathentry kind="lib" path="libs/javax.faces-api-2.0.jar"/>
+	<classpathentry kind="lib" path="libs/jcommon-1.0.23.jar"/>
+	<classpathentry kind="lib" path="libs/jfreechart-1.0.19.jar"/>
+	<classpathentry kind="lib" path="libs/mail.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
