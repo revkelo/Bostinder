@@ -22,7 +22,7 @@ import co.edu.unbosque.view.Vista;
  * @author Daniela
  * @author Jose
  * @author Kevin
- * @author Nicolás
+ * @author Nicolï¿½s
  */
 
 public class Correos {
@@ -48,14 +48,31 @@ public class Correos {
 	 */
 	private MimeMessage mensajecorreo;
 	/**
-	 * Atributo estatico tipo String del correo del que se enviara el email
+	 * Atributo estatico tipo String del correo del que se enviara el email.
+	 * Configurable via variable de entorno BOSTINDER_EMAIL o config.properties.
 	 */
-	private static String correoUwU = "bostinder3@gmail.com";
+	private static String correoUwU = System.getenv("BOSTINDER_EMAIL") != null
+			? System.getenv("BOSTINDER_EMAIL")
+			: cargarPropiedad("email");
 	/**
-	 * Atributo estatico tipo String de la contraseña del correo que se enviara el
-	 * email
+	 * Atributo estatico tipo String de la contrasena del correo.
+	 * Configurable via variable de entorno BOSTINDER_PASSWORD o config.properties.
 	 */
-	private static String contrasena = "jffwatexjcjqtjse";
+	private static String contrasena = System.getenv("BOSTINDER_PASSWORD") != null
+			? System.getenv("BOSTINDER_PASSWORD")
+			: cargarPropiedad("password");
+
+	private static String cargarPropiedad(String clave) {
+		try (java.io.InputStream in = Correos.class.getClassLoader()
+				.getResourceAsStream("config.properties")) {
+			if (in == null) return "";
+			java.util.Properties p = new java.util.Properties();
+			p.load(in);
+			return p.getProperty(clave, "");
+		} catch (Exception e) {
+			return "";
+		}
+	}
 
 	/**
 	 * Metodo Constructor
@@ -93,7 +110,7 @@ public class Correos {
 	 */
 	public void Correo(String correo1, String usuario, String contra) {
 		titulo = "Bienvenido a bostinder";
-		contenido = "Tu usuario es " + usuario + "\n" + "Tu contraseña es " + contra;
+		contenido = "Tu usuario es " + usuario + "\n" + "Tu contraseï¿½a es " + contra;
 
 		props.put("mail.smtp.host", "smtp.gmail.com");
 		props.put("mail.smtp.ssl.trust", "smtp.gmail.com");

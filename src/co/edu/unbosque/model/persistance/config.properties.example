@@ -1,0 +1,6 @@
+# Configuracion de correo para envio de emails de bienvenida
+# Copiar este archivo como config.properties y completar los valores
+# NUNCA subir config.properties al repositorio
+
+email=tu_correo@gmail.com
+password=tu_app_password_de_gmail

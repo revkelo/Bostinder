@@ -1,0 +1,15 @@
+# Compilados
+bin/
+*.class
+
+# Configuracion sensible
+**/config.properties
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# IDE
+*.iml
+.idea/
