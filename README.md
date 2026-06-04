@@ -99,5 +99,5 @@ Proyecto grupal — Universidad El Bosque, 2023
 
 - Daniela
 - Jose
-- **Kevin González**
+- **Kevin Gonzalez**
 - Nicolás
